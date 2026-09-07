@@ -64,7 +64,7 @@ BarWidget {
     id: button
     anchors.fill: parent
     bar: root.bar
-    text: "󱏐"
+    text: "󰙥" // nf-md-spray (U+F0665), not credit-card-check
     active: root.locked
     dimmed: !root.locked
     useActiveColor: true

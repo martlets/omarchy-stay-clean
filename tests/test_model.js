@@ -128,6 +128,8 @@ function testElapsedAndState() {
   assert.equal(model.normalizeMode("nope"), "both")
   assert.equal(model.modeLabel("keyboard"), "Keyboard")
   assert.equal(model.modeChoices().length, 3)
+  const bothChoice = model.modeChoices().find(function (row) { return row.value === "both" })
+  assert.equal(bothChoice.icon.codePointAt(0), 0xf0665)
   assert.equal(model.statusLabel(false, "both", "0:00"), "Off")
   assert.equal(model.statusLabel(true, "touch", "0:05"), "On · Touchscreen · 0:05")
   const idleRows = model.menuRows(false, "both")

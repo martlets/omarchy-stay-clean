@@ -1,13 +1,24 @@
 # Stay Clean
 
 An Omarchy bar control that locks the keyboard, the touchscreen, or both
-so you can wipe them without typing or tapping garbage. Click the spray
-bottle, pick a mode, clean, click again to unlock. The mouse and trackpad
-stay available the whole time.
+so you can wipe them without typing or tapping garbage.
+
+![Stay Clean on the bar](docs/bar.png)
+
+Click the spray bottle, pick a mode, clean, then **Unlock**. The mouse and
+trackpad stay available the whole time.
+
+![Menu off: Keyboard, Touchscreen, or both](docs/menu-off.png)
 
 Unlike KeyboardCleanTool and keyboard-only cleaners, Stay Clean can also
 freeze the touchscreen. It is a Stay Awake-style bar control with a small
 menu for which surface you want frozen.
+
+While a lock is on, the spray bottle uses the bar's active color, the menu
+header reads `ON · KEYBOARD · 0:12` (or whichever mode is live), and that
+row is marked **ON**.
+
+![Menu on: Unlock plus the live Keyboard row](docs/menu-on.png)
 
 MIT licensed. Plugins run unsandboxed inside `omarchy-shell`.
 
@@ -19,8 +30,8 @@ Read this repo first, then:
 omarchy plugin add https://github.com/martlets/omarchy-stay-clean.git --enable
 ```
 
-That places a spray-bottle icon in the center of the bar. To sit it next to Stay
-Awake:
+That places a spray-bottle icon (`nf-md-spray`) in the center of the bar.
+To sit it next to Stay Awake:
 
 ```bash
 omarchy bar move io.github.martlets.stay-clean --after omarchy.indicators
@@ -30,11 +41,7 @@ omarchy bar move io.github.martlets.stay-clean --after omarchy.indicators
 
 - Click the spray-bottle icon.
 - Choose **Keyboard**, **Touchscreen**, or **Keyboard + Screen**.
-- The icon turns the bar's active color while a lock is on. The menu header
-  reads `ON · KEYBOARD · 0:12` (or whichever mode is live), and that row is
-  marked **ON**.
-- Click the icon again and hit **Unlock** to stop. Mouse and trackpad stay
-  available the whole time.
+- Click the icon again and hit **Unlock** to stop.
 
 There is deliberately no keyboard shortcut to unlock. The pointer is the
 way out. The touchscreen is only locked when a mouse or trackpad is still
